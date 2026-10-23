@@ -1,0 +1,22 @@
+# BigWigs packager settings, used by .github/workflows/release.yml.
+# The addon lives in the ChatScrub/ subfolder; everything else in the repo is
+# left out, and the subfolder becomes the zip's top-level ChatScrub/ folder.
+package-as: ChatScrub
+
+ignore:
+  - art
+  - tests
+  - dist
+  - README.md
+  - FEATURES.md
+  - CURSEFORGE.md
+  - CHANGELOG.md
+  - LICENSE
+
+move-folders:
+  ChatScrub/ChatScrub: ChatScrub
+
+# Written by the workflow from the matching CHANGELOG.md section.
+manual-changelog:
+  filename: .release-notes.md
+  markup-type: markdown

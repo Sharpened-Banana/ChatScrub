@@ -78,13 +78,35 @@ Run through this on Retail and on the 1.60 client, since both are claimed on Cur
 
 ## Releasing
 
-- `CHANGELOG.md` has the release notes; paste the newest section into CurseForge's changelog field.
-- `CURSEFORGE.md` has the project page text and the screenshots to take.
-- The addon is MIT licensed (`LICENSE`); a copy ships inside the addon folder as `LICENSE.txt`.
-- Build the zip from the project folder; it holds only the `ChatScrub/` folder:
+Releases are automatic. Pushing a version tag runs `.github/workflows/release.yml`, which:
+1. runs the tests
+2. checks that the tag, the `## Version:` line and a `CHANGELOG.md` section all agree
+3. builds the zip with the [BigWigs packager](https://github.com/BigWigsMods/packager) (settings in `.pkgmeta`)
+4. uploads it to CurseForge and to GitHub Releases, with that version's changelog section as the notes
+
+CurseForge's game versions come from the `## Interface:` line.
+
+**To release a new version:**
+1. Set `## Version: X.Y.Z` in `ChatScrub/ChatScrub.toc`.
+2. Add a `## X.Y.Z (date)` section at the top of `CHANGELOG.md`.
+3. Commit, then tag and push:
 
 ```bash
-zip -rX dist/ChatScrub-1.3.1.zip ChatScrub -x '*.DS_Store' '*/.*'
+git tag -a vX.Y.Z -m "ChatScrub X.Y.Z" && git push origin main vX.Y.Z
+```
+
+**One-time setup:** create a CurseForge API token (CurseForge → your account → API Tokens) and save it as the repository secret `CF_API_TOKEN`:
+
+```bash
+gh secret set CF_API_TOKEN --repo Sharpened-Banana/ChatScrub
+```
+
+**Dry run:** in GitHub's Actions tab, run the Release workflow by hand ("Run workflow"). It builds the zip and attaches it to the run, but uploads nothing.
+
+**By hand:** `CURSEFORGE.md` has the project page text and screenshot list. The addon is MIT licensed (`LICENSE`); a copy ships inside the addon folder as `LICENSE.txt`. To build a zip yourself:
+
+```bash
+zip -rX dist/ChatScrub-X.Y.Z.zip ChatScrub -x '*.DS_Store' '*/.*'
 ```
 
 ## Icon
