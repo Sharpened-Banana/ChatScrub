@@ -91,7 +91,8 @@ wipe = function(t) for k in pairs(t) do t[k] = nil end return t end
 local ns = {}
 -- Same order as ChatScrub.toc.
 local tocFiles = {}
-for line in io.lines("ChatScrub/ChatScrub.toc") do
+for raw in io.lines("ChatScrub/ChatScrub.toc") do
+    local line = raw:gsub("\r$", "") -- packaged builds use CRLF line endings
     if line:find("%.lua$") then tocFiles[#tocFiles + 1] = line end
 end
 for _, file in ipairs(tocFiles) do
