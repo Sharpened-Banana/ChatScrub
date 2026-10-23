@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 (2026-10-23)
+
+- Adds the CurseForge project ID so addon managers can match installs to the project page. No changes in the game.
+
 ## 1.3.0 (2026-10-22): first CurseForge release
 
 Supports Retail 12.1.x and the 1.60 client.

@@ -84,7 +84,7 @@ Run through this on Retail and on the 1.60 client, since both are claimed on Cur
 - Build the zip from the project folder; it holds only the `ChatScrub/` folder:
 
 ```bash
-zip -rX dist/ChatScrub-1.3.0.zip ChatScrub -x '*.DS_Store' '*/.*'
+zip -rX dist/ChatScrub-1.3.1.zip ChatScrub -x '*.DS_Store' '*/.*'
 ```
 
 ## Icon
