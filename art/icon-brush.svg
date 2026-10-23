@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#1f6f68"/><stop offset="0.6" stop-color="#0f3f3b"/><stop offset="1" stop-color="#05201e"/>
+    </radialGradient>
+    <linearGradient id="bubble" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe8e4"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e09a55"/><stop offset="1" stop-color="#9c5a24"/>
+    </linearGradient>
+    <radialGradient id="soap" cx="35%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="0.7" stop-color="#cfefff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#9fd8f0" stop-opacity="0.75"/>
+    </radialGradient>
+    <clipPath id="bubbleClip">
+      <path d="M140 76 H372 A60 60 0 0 1 432 136 V276 A60 60 0 0 1 372 336 H214 L132 408 L150 336 H140 A60 60 0 0 1 80 276 V136 A60 60 0 0 1 140 76 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect x="10" y="10" width="492" height="492" fill="none" stroke="#000" stroke-opacity="0.45" stroke-width="20"/>
+
+  <!-- speech bubble -->
+  <path d="M140 76 H372 A60 60 0 0 1 432 136 V276 A60 60 0 0 1 372 336 H214 L132 408 L150 336 H140 A60 60 0 0 1 80 276 V136 A60 60 0 0 1 140 76 Z"
+        fill="#000" fill-opacity="0.35" transform="translate(8,10)"/>
+  <path d="M140 76 H372 A60 60 0 0 1 432 136 V276 A60 60 0 0 1 372 336 H214 L132 408 L150 336 H140 A60 60 0 0 1 80 276 V136 A60 60 0 0 1 140 76 Z"
+        fill="url(#bubble)" stroke="#0a2a28" stroke-width="10" stroke-linejoin="round"/>
+
+  <!-- messy chat text, scrubbed off along the brush's path -->
+  <g clip-path="url(#bubbleClip)">
+    <g fill="#24433f">
+      <rect x="124" y="132" width="200" height="30" rx="15"/>
+      <rect x="124" y="186" width="150" height="30" rx="15"/>
+      <rect x="124" y="240" width="100" height="30" rx="15"/>
+    </g>
+  </g>
+  <path d="M140 76 H372 A60 60 0 0 1 432 136 V276 A60 60 0 0 1 372 336 H214 L132 408 L150 336 H140 A60 60 0 0 1 80 276 V136 A60 60 0 0 1 140 76 Z"
+        fill="none" stroke="#0a2a28" stroke-width="10" stroke-linejoin="round"/>
+
+  <!-- scrub brush -->
+  <g transform="translate(40 30) rotate(145 357 345)">
+    <!-- bristles -->
+    <g fill="#f3e3b3" stroke="#6b4a1c" stroke-width="5">
+      <rect x="262" y="350" width="22" height="46" rx="6"/>
+      <rect x="290" y="350" width="22" height="50" rx="6"/>
+      <rect x="318" y="350" width="22" height="52" rx="6"/>
+      <rect x="346" y="350" width="22" height="52" rx="6"/>
+      <rect x="374" y="350" width="22" height="52" rx="6"/>
+      <rect x="402" y="350" width="22" height="50" rx="6"/>
+      <rect x="430" y="350" width="22" height="46" rx="6"/>
+    </g>
+    <!-- wooden block -->
+    <rect x="250" y="292" width="214" height="70" rx="30" fill="url(#wood)" stroke="#4a2a0c" stroke-width="10"/>
+    <rect x="282" y="306" width="150" height="14" rx="7" fill="#ffd9a8" fill-opacity="0.55"/>
+  </g>
+
+  <!-- soap suds over the scrubbed-off text -->
+  <g stroke="#2a7a95" stroke-width="5">
+    <circle cx="300" cy="230" r="34" fill="url(#soap)"/>
+    <circle cx="352" cy="190" r="26" fill="url(#soap)"/>
+    <circle cx="258" cy="270" r="20" fill="url(#soap)"/>
+    <circle cx="358" cy="148" r="16" fill="url(#soap)"/>
+    <circle cx="300" cy="290" r="14" fill="url(#soap)"/>
+    <circle cx="420" cy="104" r="18" fill="url(#soap)"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="289" cy="218" r="8"/><circle cx="344" cy="181" r="6"/><circle cx="252" cy="263" r="5"/>
+  </g>
+</svg>

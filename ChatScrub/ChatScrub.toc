@@ -1,0 +1,20 @@
+## Interface: 120105, 120107, 50503, 50504, 38002, 20506, 16001, 11508, 11509
+## Title: ChatScrub
+## Notes: Hides chat lines that match your keywords or look like gold/boost spam. /scrub
+## Author: lonezebra
+## Version: 1.3.0
+## SavedVariables: ChatScrubDB
+## SavedVariablesPerCharacter: ChatScrubCharDB
+## IconTexture: Interface\AddOns\ChatScrub\Media\Icon
+
+Locales.lua
+Rules.lua
+Repeats.lua
+Lists.lua
+Share.lua
+Core.lua
+Bubbles.lua
+Windows.lua
+Options.lua
+Menu.lua
+Minimap.lua

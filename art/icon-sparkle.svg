@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="40%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#1f6f68"/>
+      <stop offset="0.6" stop-color="#0f3f3b"/>
+      <stop offset="1" stop-color="#05201e"/>
+    </radialGradient>
+    <linearGradient id="bubble" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dfe8e4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fff3b0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ffd34d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- background, edge darkened like a WoW ability icon -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect x="10" y="10" width="492" height="492" fill="none" stroke="#000" stroke-opacity="0.45" stroke-width="20"/>
+
+  <!-- speech bubble with tail -->
+  <g transform="translate(0,6)">
+    <path d="M140 96 H372 A60 60 0 0 1 432 156 V296 A60 60 0 0 1 372 356 H214 L132 428 L150 356 H140 A60 60 0 0 1 80 296 V156 A60 60 0 0 1 140 96 Z"
+          fill="#000" fill-opacity="0.35" transform="translate(8,10)"/>
+    <path d="M140 96 H372 A60 60 0 0 1 432 156 V296 A60 60 0 0 1 372 356 H214 L132 428 L150 356 H140 A60 60 0 0 1 80 296 V156 A60 60 0 0 1 140 96 Z"
+          fill="url(#bubble)" stroke="#0a2a28" stroke-width="10" stroke-linejoin="round"/>
+
+    <!-- text lines, wiped away toward the right -->
+    <g fill="#24433f">
+      <rect x="128" y="160" width="230" height="30" rx="15"/>
+      <rect x="128" y="214" width="160" height="30" rx="15"/>
+      <rect x="128" y="268" width="96" height="30" rx="15"/>
+    </g>
+    <!-- leftover crumbs of the wiped text -->
+    <g fill="#24433f" fill-opacity="0.35">
+      <circle cx="312" cy="229" r="9"/>
+      <circle cx="252" cy="283" r="8"/>
+      <circle cx="282" cy="283" r="5"/>
+    </g>
+  </g>
+
+  <!-- sparkles: the "scrubbed clean" mark -->
+  <circle cx="378" cy="300" r="110" fill="url(#glow)"/>
+  <path d="M378 196 C388 270 400 282 470 300 C400 318 388 330 378 404 C368 330 356 318 286 300 C356 282 368 270 378 196 Z"
+        fill="#ffd34d" stroke="#7a4a00" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M440 92 C445 124 452 130 482 136 C452 142 445 148 440 180 C435 148 428 142 398 136 C428 130 435 124 440 92 Z"
+        fill="#fff1a8" stroke="#7a4a00" stroke-width="6" stroke-linejoin="round"/>
+</svg>
