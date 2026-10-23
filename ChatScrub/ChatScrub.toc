@@ -1,7 +1,8 @@
-## Interface: 120105, 120107, 50503, 50504, 38002, 20506, 16001, 11508, 11509
+## Interface: 120105, 120107, 16001
 ## Title: ChatScrub
 ## Notes: Hides chat lines that match your keywords or look like gold/boost spam. /scrub
 ## Author: lonezebra
+## X-License: MIT
 ## Version: 1.3.0
 ## SavedVariables: ChatScrubDB
 ## SavedVariablesPerCharacter: ChatScrubCharDB

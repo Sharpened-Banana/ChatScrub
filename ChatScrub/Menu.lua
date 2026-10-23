@@ -1,5 +1,5 @@
 -- Adds "Block" and "Never hide" to the menu you get by right-clicking a name in
--- chat. Needs the Menu API (Retail 11+ and the current Classic clients); on
+-- chat. Needs the Menu API (Retail 11+, and newer Classic-based clients); on
 -- clients without it, /scrub block and /scrub allow still work.
 local _, ns = ...
 local L = ns.L

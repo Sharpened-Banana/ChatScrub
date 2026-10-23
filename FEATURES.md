@@ -32,8 +32,8 @@ All of the ideas from the survey except the low-level whisper filter (see below)
 ## Still unverified in game
 
 - How the four options pages lay out on each client.
-- The right-click menu on Classic Era and MoP Classic (it needs the newer Menu API; without it only the slash commands work).
-- Hiding chat bubbles, and loot hiding on Classic clients (whether loot lines name the looter there).
+- The right-click menu on the 1.60 client (it needs the newer Menu API; without it only the slash commands work).
+- Hiding chat bubbles, and loot hiding on the 1.60 client (whether loot lines name the looter there).
 - The German, French and Spanish text needs a check by native speakers.
 
 ## Not worth it

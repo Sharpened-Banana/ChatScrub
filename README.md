@@ -4,7 +4,7 @@ A World of Warcraft addon that hides public chat lines that match your keywords 
 
 - **Filters:** channels (Trade, General, LFG, Services…), say, yell, whispers, emotes.
 - **Never filters:** your own messages, friends, guildmates, players you allow, or guild/party/raid/instance chat.
-- **Clients:** one `.toc` lists Retail 12.1.x, MoP Classic, Classic Era/Anniversary, and the 1.60 "_forever_" client.
+- **Clients:** Retail 12.1.x and the 1.60 "_forever_" client, from one `.toc`.
 - **Catches:** your keywords (with `*` wildcards or `~` Lua patterns), eight built-in spam rules you can switch one by one (guild recruitment is off by default), look-alike spellings (g0ld, c4rry, g o l d, b.o.o.s.t), German/French/Spanish spam, repeated lines, and blocked players.
 - **Also:** watch words that highlight a line and play a sound, a searchable log window, import/export of your lists, a right-click "Block" on names in chat, optional raid-icon removal, hiding other players' loot, and hiding chat bubbles of hidden lines.
 - **Saved variables:** `ChatScrubDB` (lists, log, counts, switches) per account; `ChatScrubCharDB` per character, used when a character has its own switches.
@@ -17,8 +17,7 @@ Copy the inner `ChatScrub/` folder (the one holding `ChatScrub.toc`) into your c
 | Client | Folder |
 |---|---|
 | Retail | `/Applications/World of Warcraft/_retail_/Interface/AddOns/` |
-| MoP Classic | `/Applications/World of Warcraft/_classic_/Interface/AddOns/` |
-| Classic Era / Anniversary | `/Applications/World of Warcraft/_classic_era_/Interface/AddOns/` |
+| 1.60 (forever) | `/Applications/World of Warcraft/_forever_/Interface/AddOns/` |
 
 The result should be `.../Interface/AddOns/ChatScrub/ChatScrub.toc`. If the `.toc` ends up one folder deeper, the game won't see the addon.
 
@@ -62,6 +61,8 @@ ln -s "$HOME/Local Documents/AI-Projects/ChatScrub/ChatScrub" "/Applications/Wor
 
 ## Test in game
 
+Run through this on Retail and on the 1.60 client, since both are claimed on CurseForge.
+
 1. Log in. If ChatScrub is missing from the AddOns list on the character screen, check the folder depth (see Install).
 2. Type `/scrub`. The status line should read "filtering on, spam rules on, repeats on (5 min), 0 keywords", followed by the command list.
 3. `/scrub test WTS mythic+ carry 300k` should say "would hide it (spam: sells a boost/carry)". `/scrub test WTS [Linen Cloth] 5g` should say "would show it". `/scrub test w t s c4rry 300k` should also hide.
@@ -74,6 +75,17 @@ ln -s "$HOME/Local Documents/AI-Projects/ChatScrub/ChatScrub" "/Applications/Wor
 10. `/scrub export`: a window with your lists should open, already selected for copying.
 11. Hover the minimap button (lower left of the minimap) for the status tooltip, drag it somewhere else, `/reload`, and check that it stays put. `/scrub minimap` twice should hide and then show it.
 12. If an addon error shows (BugGrabber/BugSack is installed on Retail), copy it into a note for fixing.
+
+## Releasing
+
+- `CHANGELOG.md` has the release notes; paste the newest section into CurseForge's changelog field.
+- `CURSEFORGE.md` has the project page text and the screenshots to take.
+- The addon is MIT licensed (`LICENSE`); a copy ships inside the addon folder as `LICENSE.txt`.
+- Build the zip from the project folder; it holds only the `ChatScrub/` folder:
+
+```bash
+zip -rX dist/ChatScrub-1.3.0.zip ChatScrub -x '*.DS_Store' '*/.*'
+```
 
 ## Icon
 
