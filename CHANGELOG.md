@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2 (2026-10-30)
+
+- No changes in the game. First release built and uploaded automatically.
+
 ## 1.3.1 (2026-10-23)
 
 - Adds the CurseForge project ID so addon managers can match installs to the project page. No changes in the game.
