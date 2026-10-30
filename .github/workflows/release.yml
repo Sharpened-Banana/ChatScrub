@@ -53,7 +53,7 @@ jobs:
         uses: BigWigsMods/packager@v2
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          GH_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }} # the name packager@v2 reads
 
       - name: Package only (dry run)
         if: github.ref_type != 'tag'
